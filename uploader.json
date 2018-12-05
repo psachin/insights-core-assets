@@ -607,6 +607,16 @@
             "pattern": [],
             "symbolic_name": "nova_crontab"
         },
+	{
+            "command": "/usr/bin/id -u nova",
+            "pattern": [],
+            "symbolic_name": "nova_uid"
+        },
+	{
+            "command": "/usr/bin/id -u nova_migration",
+            "pattern": [],
+            "symbolic_name": "nova_migration_uid"
+        },
         {
             "command": "/usr/sbin/ntpq -c 'rv 0 leap'",
             "pattern": [],
@@ -5553,6 +5563,24 @@
                 {
                     "archive_file_name": "/insights_commands/crontab_-l_-u_nova",
                     "command": "/usr/bin/crontab -l -u nova",
+                    "pattern": []
+                }
+            ]
+        },
+	"nova_uid": {
+            "host": [
+                {
+                    "archive_file_name": "/insights_commands/id_-u_nova",
+                    "command": "/usr/bin/id -u nova",
+                    "pattern": []
+                }
+            ]
+        },
+	"nova_migration_uid": {
+            "host": [
+                {
+                    "archive_file_name": "/insights_commands/id_-u_nova_migration",
+                    "command": "/usr/bin/id -u nova_migration",
                     "pattern": []
                 }
             ]
